@@ -97,7 +97,7 @@
 <body>
 
 <h1>The Orchestration Climb</h1>
-<p class="subtitle">0 = no process orchestration at all. 100 = full agentic case management, running like clockwork. Climb the ladders Flowable gives you — watch out for the snakes everyone else hits.</p>
+<p class="subtitle">0 = no process orchestration at all. 100 = full orchestration maturity, running like clockwork. Climb the ladders to orchestrate to the end, and watch out for the snakes on the way with their traps and tricks!</p>
 
 <div class="layout">
   <div class="board-wrap">
@@ -121,11 +121,11 @@
 
     <div id="status">Click the die or the button to make your first move.</div>
 
-    <div class="winbanner" id="winbanner">🏆 Full clockwork orchestration achieved. Every case governed, every agent supervised, every audit answered in seconds.</div>
+    <div class="winbanner" id="winbanner">🏆 Full clockwork orchestration achieved. Every case governed, every agent supervised, every audit answered in seconds.You are the orchestration champion! You deserve a drink after all this work.</div>
 
     <div class="legend">
-      <div><span class="dot" style="background:var(--good)"></span>Ladder bottoms = a Flowable differentiator lifts you up</div>
-      <div><span class="dot" style="background:var(--bad)"></span>Snake heads = a real customer pain point drags you down</div>
+      <div><span class="dot" style="background:var(--good)"></span>Ladder bottoms = an orchestration differentiator lifts you up</div>
+      <div><span class="dot" style="background:var(--bad)"></span>Snake heads = a real organisational pain point drags you down</div>
     </div>
 
     <button class="resetBtn" id="resetBtn">Restart game</button>
@@ -138,24 +138,24 @@ const TOTAL = 100;
 
 // Snakes: head (higher square) -> tail (lower square), each tagged with the customer pain point it represents
 const snakes = {
-  97: { to: 78, text: "Inconsistent customer journeys — the case looks different depending on who touches it." },
-  89: { to: 53, text: "Legacy, fragmented architecture — every new system is another integration to babysit." },
-  74: { to: 41, text: "AI pilots stitched together from point tools — they never scale past the demo." },
-  62: { to: 35, text: "Compliance debt compounds with every release — governance becomes its own project." },
-  54: { to: 24, text: "Evidence scattered across emails — audit time turns into a reconstruction exercise." },
-  44: { to: 16, text: "Proprietary, locked-in models block change — you're stuck waiting on the vendor." },
-  17: { to: 5,  text: "Fragmented, manual processes — work doesn't scale past the team that built it." }
+  97: { to: 78, text: "Inconsistent customer journeys — the case looks different depending on who works on it. Roll again to un-become that person." },
+  89: { to: 53, text: "Legacy, fragmented architecture —  every new system arrives needing a babysitter, a nap, and a snack. Roll again." },
+  74: { to: 41, text: "AI pilots duct-taped from point tools — impressive in the demo, allergic to production. Roll once more, brave duct-tape artist." },
+  62: { to: 35, text: "Compliance debt compounds with every release — governance has quietly become its own full-time job (with no offer letter). One more roll, sorry not sorry." },
+  54: { to: 24, text: "Evidence scattered across emails — audit season is basically archaeology now. Nina from Compliance is already judging you. Roll to dig yourself out." },
+  44: { to: 16, text: "Proprietary, locked-in models block change — you're stuck waiting on the vendor like it's tech support hold music, forever. Roll to find a no-lock-in vendor who actually picks up." },
+  17: { to: 5,  text: "Fragmented, manual processes — work grinds to a halt the second the one person who understands it goes on vacation. New team or new process? Roll and find out." }
 };
 
 // Ladders: bottom (lower square) -> top (higher square), each tagged with the Flowable differentiator it represents
 const ladders = {
-  4:  { to: 22, text: "Native CMMN engine — AI agents, prompts, and tools are first-class case objects." },
-  15: { to: 47, text: "Integration flexibility — connects to existing core systems without rip-and-replace." },
-  28: { to: 56, text: "Unified process + case in one platform — no stitching two products together." },
-  39: { to: 65, text: "Governance built into the architecture — regulators get answers in seconds." },
-  51: { to: 79, text: "Design-time AI assistance with visual compliance validation — governance is visible before deployment." },
-  68: { to: 90, text: "Hybrid deployment, on-prem or cloud — meets data sovereignty needs cloud-only rivals can't." },
-  82: { to: 98, text: "One engine, clockwork orchestration — shared context, no handoffs, no translation layers." }
+  4:  { to: 22, text: "Native CMMN engine — AI agents, prompts, and tools are first-class case objects. Climb the ladder, you architecture whisperer!" },
+  15: { to: 47, text: "Integration flexibility — connects to existing core systems, no rip-and-replace required. Skip ahead, nothing to demolish here!" },
+  28: { to: 56, text: "Unified process + case in one platform — no stitching two products together. Zoom up the ladder, Frankenstein-free!" },
+  39: { to: 65, text: "Governance built into the architecture —  regulators get answers in seconds. Fast-track to the top, paperwork panic averted! Guess who is the office hero eh ;) " },
+  51: { to: 79, text: "Design-time AI assistance with visual compliance validation — governance is visible before deployment. You saw it coming, ladder's calling!" },
+  68: { to: 90, text: "Hybrid deployment, on-prem or cloud — meets data sovereignty needs cloud-only rivals can't. Best of both worlds, climb both ladders' worth!" },
+  82: { to: 98, text: "One engine, clockwork orchestration —  shared context, no handoffs, no translation layers. Straight shot to the top, ticking like clockwork!" }
 };
 
 const board = document.getElementById('board');
